@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">熄灯守夜</string>
+    <string name="accessibility_service_label">熄灯守夜 · 防后台切换增强</string>
+    <string name="accessibility_service_desc">仅在夜间锁机或白天试锁期间实时检测当前前台及悬浮小窗应用包名，防止从后台多任务切入受限应用。纯本地运行，绝不读取任何屏幕文字或密码。</string>
+</resources>

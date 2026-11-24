@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 柔和中心光晕 -->
+    <path
+        android:fillColor="#26FFFFFF"
+        android:pathData="M54,54m-28,0a28,28 0,1 1,56 0a28,28 0,1 1,-56 0" />
+
+    <!-- 莹白守夜新月（严格位于 66dp Adaptive Icon 安全区内部） -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M67.2,61.8A18.2,18.2 0,1 1,49.4 39.6a14.4,14.4 0,0 0,17.8 22.2Z" />
+
+    <!-- 四角星芒柔和光环 -->
+    <path
+        android:fillColor="#44FFFBEB"
+        android:pathData="M68.5,39.5m-9.5,0a9.5,9.5 0,1 1,19 0a9.5,9.5 0,1 1,-19 0" />
+
+    <!-- 暖白星芒 -->
+    <path
+        android:fillColor="#FFFBEB"
+        android:pathData="M68.5,32.5L70.1,37.9L75.5,39.5L70.1,41.1L68.5,46.5L66.9,41.1L61.5,39.5L66.9,37.9Z" />
+</vector>

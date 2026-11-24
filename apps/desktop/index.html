@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>熄灯守夜 · Windows 电脑端</title>
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/desktop/styles.css" />
+</head>
+<body>
+  <div class="window-shell">
+    <!-- 模拟电脑关机息屏态（仅模拟模式触发） -->
+    <section id="poweroff-screen" class="poweroff-screen hidden" aria-live="polite"></section>
+
+    <!-- Windows 原生双栏桌面架构：左侧司辰导航栏 + 右侧自适应主工作区 -->
+    <div id="desktop-shell" class="desktop-shell">
+      <aside class="sidebar">
+        <div class="sb-top">
+          <div class="sb-brand">
+            <div id="sb-brand-mark" class="sb-brand-mark"></div>
+            <div class="sb-brand-copy">
+              <div class="sb-app-name">熄灯守夜</div>
+              <div class="sb-app-sub">DormSleep · 桌面伴随</div>
+            </div>
+          </div>
+
+          <div class="sb-clock-card">
+            <div id="dt-clock" class="sb-clock">--:--:--</div>
+            <div id="dt-date" class="sb-date">--</div>
+          </div>
+
+          <nav class="sb-nav" id="dt-nav" aria-label="主导航"></nav>
+        </div>
+
+        <div class="sb-footer">
+          <div id="dt-device-card" class="sb-device-card"></div>
+        </div>
+      </aside>
+
+      <main id="desktop-main" class="main-canvas"></main>
+    </div>
+
+    <!-- 结束今晚二次确认模态窗（支持 Esc 关闭） -->
+    <div id="confirm-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true"></div>
+
+    <!-- 轻量反馈气泡 -->
+    <div id="dt-toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+    <!-- 开发演示浮窗（真实 Windows 伴随服务模式下自动彻底隐藏） -->
+    <aside class="dev-float hidden" id="dt-dev-float">
+      <button id="dt-dev-toggle" class="dev-fab" type="button">
+        <span class="dev-fab-dot"></span>
+        <span>模拟控制</span>
+        <span id="dt-dev-arrow" class="dev-fab-arrow"></span>
+      </button>
+      <div id="dt-dev-panel" class="dev-panel hidden">
+        <div class="dev-label">电脑电源与局域网模拟</div>
+        <div id="dt-dev-actions" class="dev-row"></div>
+      </div>
+    </aside>
+  </div>
+
+  <script type="module" src="/desktop/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# Local runtime state & private companion databases
+mock-bridge/state.json
+services/windows-companion/data/
+
+# Signing keys & local secrets (NEVER commit!)
+*.jks
+*.keystore
+signing.properties
+local.properties
+
+# Android build artifacts
+apps/android-native/.gradle/
+apps/android-native/build/
+apps/android-native/app/build/
+apps/android-native/.idea/
+
+# Packaged binaries & promo video workspace
+DormSleep*.apk
+DormSleep*.exe
+release/
+promo/
+
+# OS files
+.DS_Store
+Thumbs.db

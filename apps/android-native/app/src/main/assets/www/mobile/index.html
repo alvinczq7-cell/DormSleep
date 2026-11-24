@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#080B1A" />
+  <title>熄灯守夜 · Android 手机端</title>
+  <link rel="stylesheet" href="/mobile/styles.css" />
+</head>
+<body>
+  <div class="stage">
+    <div id="phone-shell" class="phone-shell">
+      <!-- 顶部轻量状态栏（真机与浏览器均保持简洁清爽） -->
+      <header class="statusbar">
+        <div class="sb-left">
+          <span id="sb-brand-dot" class="sb-brand-dot"></span>
+          <span id="sb-time" class="sb-time">--:--</span>
+        </div>
+        <div class="sb-right">
+          <span id="sb-link" class="sb-pill"></span>
+          <span id="sb-perm" class="sb-pill"></span>
+        </div>
+      </header>
+
+      <!-- 关键状态常驻提示条（权限中断 / 15 分钟放行中 / 睡前收尾提醒） -->
+      <div id="notif-banner" class="notif-banner hidden" role="status"></div>
+
+      <!-- 主内容滚动区（引导 / 4 个核心页签） -->
+      <main id="app-main" class="app-main"></main>
+
+      <!-- 底部原生 Android 风格导航栏 -->
+      <nav id="bottom-nav" class="bottom-nav hidden" aria-label="底部导航"></nav>
+
+      <!-- 浏览器演示专用：模拟前台停留 App 画面（真机 WebView 自动隐藏） -->
+      <div id="foreground-view" class="foreground-view hidden"></div>
+
+      <!-- 夜间全屏低亮拦截与应急解锁层 -->
+      <div id="overlay-layer" class="overlay-layer hidden" role="dialog" aria-modal="true"></div>
+
+      <!-- 解锁后平静反馈弹窗 -->
+      <div id="feedback-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true"></div>
+
+      <!-- 轻量 Toast 提示 -->
+      <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+    </div>
+
+    <!-- 浏览器演示调试抽屉（真实 Android WebView 内自动彻底隐藏） -->
+    <aside class="dev-float" id="dev-drawer">
+      <button id="dev-toggle" class="dev-fab" type="button">
+        <span class="dev-fab-dot"></span>
+        <span>调试</span>
+        <span id="dev-arrow"></span>
+      </button>
+      <div id="dev-panel" class="dev-panel hidden"></div>
+    </aside>
+  </div>
+
+  <script type="module" src="/mobile/app.js"></script>
+</body>
+</html>
